@@ -1,0 +1,89 @@
+body, #chart, svg, .grandparent rect {
+  background-color: rgba(0,0,0,.25);
+  font-family: 'Cinzel', serif;
+}
+
+#chart {
+  background: transparent;
+  /*font-family: Helvetica, Arial, sans-serif;*/
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  position: absolute;
+  z-index: 100;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    color: white;
+}
+
+text {
+  pointer-events: none;
+  color: white;
+  font-size: 14px;
+}
+
+/* Added Styling */
+.ctext, .ptext {
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+tspan {
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Styling for Treemap Boxes */
+.children rect.parent,
+.grandparent rect {
+  cursor: pointer;
+}
+
+.children rect.parent {
+  fill: #bbb;
+  fill-opacity: 0;
+}
+
+.children:hover rect.child {
+  fill: #bbb;
+}
+
+/*  Added Styling    */
+.grandparent text {
+  font-weight: bold;
+}
+
+rect {
+  fill: none;
+  stroke: black;
+}
+
+rect.parent,
+.grandparent rect {
+  stroke-width: 2px;
+}
+
+/*rect.parent {
+  pointer-events: none;
+}*/
+
+.grandparent rect {
+  fill: transparent;
+  fill-opacity: 1;
+}
+
+/* Effects */
+.children:hover {
+  border: 5px solid white;
+}
